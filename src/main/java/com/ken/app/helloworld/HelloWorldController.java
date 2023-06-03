@@ -1,4 +1,4 @@
-package com.ken.app.controller;
+package com.ken.app.helloworld;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

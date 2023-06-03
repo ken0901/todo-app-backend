@@ -1,4 +1,4 @@
-package com.ken.app.controller;
+package com.ken.app.helloworld;
 
 public class HelloWorldBean {
 
