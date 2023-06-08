@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-public class HelloWorldController {
+public class BasicauthenticationController {
 
     //@RequestMapping(method = RequestMethod.GET, path = "/hello-world")
     @GetMapping(path = "hello-world")
@@ -23,5 +23,10 @@ public class HelloWorldController {
     @GetMapping(path = "hello-world/path-variable/{name}")
     public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
         return new HelloWorldBean(String.format("Hello World, %s", name));
+    }
+
+    @GetMapping(path = "basicauth")
+    public AuthenticationBean helloAuthBean() {
+        return new AuthenticationBean("You are authenticated");
     }
 }
