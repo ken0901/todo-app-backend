@@ -6,16 +6,17 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class SecurityConfiguration  {
     //1: Response to preflight request doesn't pass access control check
     //2: basic auth
 
     // Spring Boot 2
+    /*
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
@@ -25,9 +26,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .httpBasic();
     }
+    */
 
-    /*
-    * this needs Spring Boot 3
+
+    // this needs Spring Boot 3 and Java 17
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         //1: Response to preflight request doesn't pass access control check
@@ -46,6 +48,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                                         (SessionCreationPolicy.STATELESS))
                         .csrf().disable()
                         .build();
-    }*/
+    }
 
 }

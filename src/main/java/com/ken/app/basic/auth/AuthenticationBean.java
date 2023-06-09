@@ -1,4 +1,4 @@
-package com.ken.app.helloworld;
+package com.ken.app.basic.auth;
 
 public class AuthenticationBean {
     private String message;

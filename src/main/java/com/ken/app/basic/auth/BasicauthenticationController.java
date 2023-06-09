@@ -1,5 +1,6 @@
-package com.ken.app.helloworld;
+package com.ken.app.basic.auth;
 
+import com.ken.app.helloworld.HelloWorldBean;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
