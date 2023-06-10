@@ -30,7 +30,7 @@ public class SecurityConfiguration  {
 
 
     // this needs Spring Boot 3 and Java 17
-    @Bean
+    /*@Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         //1: Response to preflight request doesn't pass access control check
         //2: basic auth
@@ -48,6 +48,6 @@ public class SecurityConfiguration  {
                                         (SessionCreationPolicy.STATELESS))
                         .csrf().disable()
                         .build();
-    }
+    }*/
 
 }
